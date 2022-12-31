@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main-scene-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 60px;
+    font-size: 58px;
+    color: gold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+}
+
+/* .sky {
+    height: 150px;
+    background-image: url('../img/sky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+} */
+
+.capy-img {
+    z-index: 1;
+}
+
+.main-scene {
+    height: 100%;
+    background-image: url('../img/winter.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+   
+}
+
+.snowy-floor {
+    position: relative;
+    margin-top: auto;
+    height: 150px;
+    background-image: url('../img/snow_text.png');
+    z-index: 100;
+}
+
+.snowy-floor::before {
+    content: '';
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    left: 50%;
+    bottom: 0px;
+    background-image: url('../img/capy_3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.snowy-floor::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-image: url('../img/snow.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+
+.tree {
+    position: absolute;
+    display: block;
+    left: 200px;
+    top: -350px;
+    height: 400px;
+    width: 400px;
+    background-image: url('../img/tree.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.audio {
+    position: absolute;
+    background-color: transparent;
+    width: 150px;
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+.audio:hover {
+    opacity: 1;
+}
+
+.audio-btn {
+    
+}

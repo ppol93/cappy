@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script> 
+    <!-- <script src="js/snowfall.min.js" defer></script> -->
+    <script src="dist/sound.js" defer></script>
+    
+
+    </script>
+    <title>CapyNewYear!</title>
+</head>
+<body>
+    <div class="container">
+        
+        
+        <div class="sky"></div>
+        <div class="main-scene">
+            <!-- <button class="audio-btn"></button> -->
+            <audio  id="audio" mute="true" autoplay controls class="audio" loop="true">
+                <source src="Jingle Bells.mp3" type="audio/mp3">
+            </audio>
+            <h1 class="main-scene-heading">Cappy New Year!</h1>
+        </div>
+        <div class="snowy-floor">
+            <div class="tree"></div>
+        </div>
+    </div>
+    <script src="dist/snowfall.min.js"></script>
+    <script type="text/javascript">
+        snowFall.snow(document.body, {
+            minSize: 8
+        });
+
+        let containerDiv = document.querySelector('.container'), containerDivIsSnowing = true;
+        snowFall.snow(containerDiv);
+    </script>
+</body>
+</html>
